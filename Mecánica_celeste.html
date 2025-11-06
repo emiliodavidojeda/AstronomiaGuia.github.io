@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es"></html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecánica celeste</title>
+    <style>
+        .body{
+            background-color: beige;
+        }
+        .contendor{
+            background-color:rgb(42, 184, 184);
+            padding: 35px;
+        }
+    </style>
+    <link rel= "stylesheet" href="estiloMc.css">
+
+</head>
+<body>
+    <div class="contendor">
+
+        <h1><p style="text-align: center;">Mecánica celeste</p></h1>
+        <a href="index.html">Volver al inicio</a>
+
+    </div>  
+    <div class="informacion">
+        <h2>
+            Leyes de Newton
+            <p style="font-size: medium; font-weight: normal;">* La primera ley de movimiento de Newton nos dice que un cuerpo/masa en estado de descanso o en
+movimiento uniforme va a mantenerse en ese estado hasta experimentar una fuerza externa (F)</p>
+            <p style="font-size:large;">∑~F = 0 ⇒ d~vdt = 0</p>
+            <p style="font-size: medium; font-weight: normal;">* La segunda ley de movimiento de Newton nos dice que la aceleración de un objeto es directamente
+proporcional a la fuerza externa e inversamente proporcional a la masa de un objeto</p>
+            <p style="font-size:large;">F = m~d</p>
+            <p style="font-size:large;">F =d/dt(m~v)</p>
+            <p style="font-size: medium; font-weight: normal;">* La tercera ley de movimiento de Newto,n conocida también como la ley de acción y reacción, nos
+dice que la fuerza aplicada a un objeto (A) por otro objeto (B) es igual pero opuesta a la fuerza
+aplicada</p>
+            <p style="font-size:large;">F~A = F~B</p>
+            <p style="font-size:large;">d*(pA + pB)/dt = 0</p>
+            Gravitación Universal
+            <p style="font-size: medium; font-weight: normal;">G= s 6.67*10**(-11) N m**2kg**(-2)</p>
+            <p style="font-size:large;">F = -GMm/r**2</p>
+            <p style="font-size: medium; font-weight: normal;">Donde M y m = Masa de ambos vuerpos respectivamente, y r = a la distancia entre los cuerpos desde sus centros</p>
+            
+            <form>
+                <label for="M" class="label-M">
+                    <p style="font-size: medium; display: inline;" >Masa del cuerpo1 (M):</p>
+                </label>
+
+                <label for="M" class="label-m">
+                    <p style="font-size: medium; display: inline;" >Masa del cuerpo2 (m):</p>
+                </label>
+
+                <label for="M" class="label-r">
+                    <p style="font-size: medium; display: inline;" >Distancia entre cuerpos(r):</p>
+                </label>
+                
+                <br>
+                <input type="number" id="inputM" min="0" value="0" required class="tiempo" oninput="this.nextElementSibling.
+                value = this.value" ><output id="salida1">0</output>
+                
+                <input type="number" id="inputm" min="0" value="0" required class="tiempo" oninput="this.nextElementSibling.
+                value = this.value" ><output id="salida2">0</output>
+
+                <input type="number" id="inputr" min="0" value="0" required class="tiempo" oninput="this.nextElementSibling.
+                value = this.value" ><output id="salida3">0</output>
+                <br>
+                <p style="font-size:large;" id="fuerzaG"></p>
+                <br>
+            </form>
+            <button onclick="simulacion_FG()">Presionar para Fuerza</button>
+
+            <br>
+            
+            Leyes de Kepler            
+            <p style="font-size: medium; font-weight: normal;">* Los planetas orbitan el Sol en forma elíptica</p>
+            <p style="font-size:large;">r = P / (1+e cosθ)</p>
+            <p style="font-size: medium; font-weight: normal;">e = excentricidad = c/a</p>
+            
+            <form>
+                <label for="e" class="label-e">
+                    <p style="font-size: medium; display: inline;" >excentricidad (e):</p>
+                </label>
+
+                <label for="θ" class="label-θ">
+                    <p style="font-size: medium; display: inline;" >Angulo desde periapsis (θ):</p>
+                </label>
+
+                <label for="P" class="label-P">
+                    <p style="font-size: medium; display: inline;" >Distancia m y M en eje semi-menor(P):</p>
+                </label>
+
+                <label for="R" class="label-R">
+                    <p style="font-size: medium; display: inline;" >Distancia entre m y M (r):</p>
+                </label>
+                
+                <br>
+                <input type="number" id="inpute" min="0" value="0" required class="tiempo" oninput="this.nextElementSibling.
+                value = this.value" ><output id="salida4">0</output>
+                
+                <input type="number" id="input0" min="0" value="0" required class="tiempo" oninput="this.nextElementSibling.
+                value = this.value" ><output id="salida5">0</output>
+
+                <input type="number" id="inputP" min="0" value="0" required class="tiempo" oninput="this.nextElementSibling.
+                value = this.value" ><output id="salida6">0</output>
+
+                <input type="number" id="inputR" min="0" value="0" required class="tiempo" oninput="this.nextElementSibling.
+                value = this.value" ><output id="salida7">0</output>                
+
+                <br>
+                <p style="font-size:large;" id="Distanciar"></p>
+                <br>
+                <p style="font-size:large;" id="periapsis"></p>
+                <br>
+
+            </form>
+            <button onclick="simulacion_K()">Presionar para Distancia entre M y r</button>
+            <button onclick="simulacion_K()">Presionar para periapsis</button>
+            <br>
+            <img src="imagenes/elipse-excentricidad.jpg">
+            <p style="font-size: medium; font-weight: normal;">* Conservación del momento angular</p>
+            <p style="font-size:large;">L = I * w donde I = momento de inercia y w = velocidad angular</p>
+            <p style="font-size: medium; font-weight: normal;">
+                * El cuadrado del periodo orbital T de un planeta es proporcional al cubo del eje semi-mayor a de su órbita con el Sol.
+            </p>
+            <p style="font-size:large;"></p>
+    </div>
+    <script>    
+        function simulacion_FG () {
+            const M = parseFloat(document.getElementById('inputM').value) || 0;
+            const m = parseFloat(document.getElementById('inputm').value) || 0;
+            const r = parseFloat(document.getElementById('inputr').value) || 0;
+
+            const G = 6.67e-11;
+            const fuerzaG = M*m* G / (r**2) 
+            document.getElementById('fuerzaG').textContent = `fuerzaG: ${fuerzaG}`;
+        }
+
+        function simulacion_K () {
+            const e = parseFloat(document.getElementById('inpute').value) || 0;
+            const deg = parseFloat(document.getElementById('input0').value) || 0;
+            const P = parseFloat(document.getElementById('inputP').value) || 0;
+            const r = parseFloat(document.getElementById('inputR').value) || 0;
+
+            const Distanciar = P / ( 1 + (Math.cos(deg))) 
+            const periapsis = r * ( 1 + (e * Math.cos(deg)))
+            document.getElementById('Distanciar').textContent = `Distanciar: ${periapsis}`;
+            document.getElementById('periapsis').textContent = `periapsis: ${Distanciar}`;
+        }
+
+    </script>
+</body>

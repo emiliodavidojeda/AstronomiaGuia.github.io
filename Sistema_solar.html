@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es"></html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema solar</title>
+    <style>
+        .body{
+            background-color: beige;
+        }
+        .contendor{
+            background-color:brown;
+            padding: 35px;
+        }
+    </style>
+    <link rel="stylesheet" href="estiloSs.css">
+    <script src="Nebulosa.js"></script>
+</head>
+<body>
+    <div class="contendor">
+
+        <h1><p style="text-align: center;">Sistema solar</p></h1>
+        <a href="index.html">Volver al inicio</a>
+    </div>
+    <div class="Informacion">
+        <h2>
+            Hipótesis nebular
+            <p style="font-size: medium; font-weight: normal;">* inicio: una nube interestelar de polvo y gas (llamada nebulosa solar)</p>
+            <p style="font-size: medium; font-weight: normal;">* Comienzo:  nebulosa es más gruesa que la región interestelar promedio y debido a alguna perturbación hace unos 
+                4570 millones de años que lo comprime></p>
+            <p style="font-size: medium; font-weight: normal;">Contracción: empieza a colapsar por su propia gravedad></p>
+            <p style="font-size: medium; font-weight: normal;">* Disco de acreción: Gira debido a la conservacion del momento angular, y su aumento de presión provoca que se caliente</p>
+            <p style="font-size: medium; font-weight: normal;">* Proto-estrella:  se forma en el centro, cuando el núcleo se vuelve opaco; más tarde se convertirá en el Sol</p>
+            <div class="nebulosa" ></div>          
+
+            Dinámica de los cuerpos del Sistema Solar
+            <p style="font-size:large;">Órbita</p>
+            <p style="font-size: medium; font-weight: normal;"> La excentricidad orbital de un objeto astronómico es un parámetro que determina la cantidad en que su órbita alrededor de otro cuerpo se desvía
+                de un círculo perfecto.<br> A partir de la periapsis y apoapsis se puede calcular la excentricidad:</p>
+            <p style="font-size:large;">rp / ra = 1-e/ 1+e</p>
+            <form >
+                <label for="c" class="label-c">
+                    <p style="font-size: large;">Simulador:</p>
+                    <p style="font-size: medium;">Distancia entre "centro" y primer cuerpo (c):</p>
+                </label>
+                <input type="number" id="input2" max="100" min="0" value="0" required class="tiempo" oninput="this.nextElementSibling.
+                value = this.value"><output id="salida2">0</output><br>
+
+                <label for="a" class="label-c">
+                    <p style="font-size: medium;">Distancia entre "centro" y segundo cuerpo (a):</p>
+                </label>
+                <input type="number" id="input3" max='100' min="0" value="0" required class="tiempo" oninput="this.nextElementSibling.
+                value = this.value" ><output id="salida3"
+                >0</output><br>
+                <p style="font-size:large;" id="periapsis"></p>
+                <p style="font-size:large;" id="apoapsis"></p>
+                <br>
+            </form>
+            <button onclick="simulacion_p()">Presionar para periapsis</button>
+            <button onclick="simulacion_a()">Presionar para apoapsis</button>
+            
+            <p style="font-size: medium; font-weight: normal;">El periodo orbital es el tiempo que tarda un planeta u otro objeto en realizar una órbita completa y viene dada por:></p>        
+            <p style="font-size:large;">T = 2π*a**(3/2)/ √µ</p>
+            <p style="font-size: medium; font-weight: normal;">µ = (Constante de gravitacion(G): 6,67 x 10-¹¹ Nm²/kg²) * (Masa(M):kg)</p>
+            <form >
+                <label for="a" class="label-a">
+                    <p style="font-size: large;">Simulador:</p>
+                    <p style="font-size: medium;">Distancia entre "centro" y segundo cuerpo (a):</p>
+                </label>
+
+                <label for="M" class="label-M">
+                    <p style="font-size: medium;">Masa del cuerpo (M):</p>
+                </label>
+                <input type="number" id="input5" min="0" value="0" required class="tiempo" oninput="this.nextElementSibling.
+                value = this.value" ><output id="salida5">0</output
+                ><br>
+                <p style="font-size:large;" id="periodo"></p>
+                <br>
+            </form>
+            <button onclick="simulacion_T()">Presionar para Periodo</button>
+            
+    </div>
+    <script>
+
+        function simulacion_p () {
+            const c = parseFloat(document.getElementById('input2').value) || 0;
+            const a = parseFloat(document.getElementById('input3').value) || 0;
+
+            const periapsis = 1-(c/a)
+            document.getElementById('periapsis').textContent = `periapsis: ${periapsis}`;
+        }
+                
+        function simulacion_a () {
+            const c = parseFloat(document.getElementById('input2').value) || 0;
+            const a = parseFloat(document.getElementById('input3').value) || 0;
+
+            const apoapsis = 1+(c/a)
+            document.getElementById('apoapsis').textContent = `apoapsis: ${apoapsis}`;
+        }
+
+        function simulacion_T () {
+            const a = parseFloat(document.getElementById('input3').value) || 0;
+            const M = parseFloat(document.getElementById('input5').value) || 0;
+
+            const G = 6.67e-11;
+            const periodo = (2 * Math.PI * Math.pow(a, 1.5)) / Math.sqrt(G * M);
+            
+            document.getElementById('periodo').textContent = `periodo: ${periodo}`;
+        }
+
+    </script>
+</body>

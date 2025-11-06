@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.informacion {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    font-weight: lighter;
+}
+
+.separar {
+    padding: 90px;
+}
+
+.Tierra {
+    z-index: 0;
+    margin-top: 155px;
+    margin-left: auto;
+    margin-right: auto;
+	background-color: rgba(0, 151, 18, 0.888);
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	position: relative;
+}
+
+.Luna {
+    top: 1px;
+    background-color: rgba(133, 148, 134, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: girarL 6s linear infinite;
+}
+
+@keyframes girarL {
+    from {transform: rotate(0deg) translate(30px);}
+    to {transform: rotate(360deg) translate(30px);}
+}
+
+.Mercurio {
+    top: 2px;
+    background-color: rgba(121, 69, 55, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -21px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: girarM 5s linear infinite;
+}
+
+@keyframes girarM {
+    from {transform: rotate(0deg) translate(50px);}
+    to {transform: rotate(360deg) translate(50px);}
+}
+
+.Venus {
+    top: x2px;
+    background-color: rgba(188, 156, 42, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -18px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: girarV 5.5s linear infinite;
+}
+
+@keyframes girarV {
+    from {transform: rotate(0deg) translate(70px);}
+    to {transform: rotate(360deg) translate(70px);}
+}
+
+.El_sol {
+    top: 3px;
+    background-color: rgb(255, 251, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -23px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: girarS 4s linear infinite;
+}
+
+@keyframes girarS {
+    from {transform: rotate(0deg) translate(90px);}
+    to {transform: rotate(360deg) translate(90px);}
+}
+
+.Marte {
+    top: 3px;
+    background-color: rgba(203, 77, 45, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: girarMa 5s linear infinite;
+}
+
+@keyframes girarMa {
+    from {transform: rotate(0deg) translate(110px);}
+    to {transform: rotate(360deg) translate(110px);}
+}
+
+.Jupiter {
+    top: 3px;
+    background-color: rgba(255, 157, 0, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: girarJ 6s linear infinite;
+}
+
+@keyframes girarJ {
+    from {transform: rotate(0deg) translate(130px);}
+    to {transform: rotate(360deg) translate(130px);}
+}
+
+.Saturno {
+    top: 3px;
+    background-color: rgba(255, 218, 123, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: girarSa 4.5s linear infinite;
+}
+
+@keyframes girarSa {
+    from {transform: rotate(0deg) translate(150px);}
+    to {transform: rotate(360deg) translate(150px);}
+}
+
+/* Heliocentrismo */
+.HEl_sol {
+    z-index: 0;
+    margin-top: 210px;
+    margin-left: auto;
+    margin-right: auto;
+	background-color: rgb(255, 251, 0);
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	position: relative;
+    animation: HgirarSo 6s linear infinite;
+}
+
+@keyframes HgirarSo {
+    from {transform: rotate(0deg) translate(10px);}
+    to {transform: rotate(360deg) translate(10px);}
+}
+
+.HMercurio {
+    top: 1px;
+    background-color: rgba(121, 69, 55, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -20px;
+    margin-left: auto; /* 750px*/
+    margin-right: auto;
+    animation: HgirarM 6s linear infinite;
+    box-shadow: 
+        inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+        0.3em 0.2em 1em rgba(0, 0, 0, 0.8);
+}
+
+@keyframes HgirarM {
+    0% {transform: rotate(0deg) translate(30px);}
+    50% {transform: rotate(180deg) translate(45px);}
+    100% {transform: rotate(360deg) translate(30px);}
+}
+
+.HTierra {
+    top: 2px;
+    background-color: rgba(0, 151, 18, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -21px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: HgirarT 6.5s linear infinite;
+    box-shadow: 
+        inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+        0.3em 0.2em 1em rgba(0, 0, 0, 0.5),
+        inset 0 -3em 3em #92fdffc2,
+        0.3em 0.2em 1em #869cfff6;
+}
+
+@keyframes HgirarT {
+    0% {transform: rotate(0deg) translate(80px);}
+    50% {transform: rotate(180deg) translate(95px);}
+    100% {transform: rotate(360deg) translate(80px);}
+}
+
+.HVenus {
+    top: x2px;
+    background-color: rgba(188, 156, 42, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -18px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: HgirarV 5.5s linear infinite;
+    box-shadow: 
+        inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+        0.3em 0.2em 1em rgba(0, 0, 0, 0.8);
+}
+
+@keyframes HgirarV {
+    from {transform: rotate(0deg) translate(60px);}
+    to {transform: rotate(360deg) translate(60px);}
+}
+
+.HMarte {
+    top: 3px;
+    background-color: rgba(203, 77, 45, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: HgirarMa 6s linear infinite;
+    box-shadow: 
+       inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+       0.3em 0.2em 1em rgba(0, 0, 0, 0.5),
+       inset 0 -3em 3em #d8f7ff60,
+       0.3em 0.2em 1em #ebfbfff6;
+}
+
+@keyframes HgirarMa {
+    from {transform: rotate(0deg) translate(110px);}
+    to {transform: rotate(360deg) translate(110px);}
+}
+
+.HJupiter {
+    top: 3px;
+    background-color: rgba(255, 157, 0, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: HgirarJ 6.2s linear infinite;
+    box-shadow: 
+        inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+        0.3em 0.2em 1em rgba(0, 0, 0, 0.8);
+}
+
+@keyframes HgirarJ {
+    from {transform: rotate(0deg) translate(130px);}
+    to {transform: rotate(360deg) translate(130px);}
+}
+
+
+.HSaturno {
+    top: 3px;
+    background-color: rgba(255, 218, 123, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: HgirarSa 7s linear infinite;
+    box-shadow: 
+        inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+        0.3em 0.2em 1em rgba(0, 0, 0, 0.8);
+}
+
+@keyframes HgirarSa {
+    0% {transform: rotate(0deg) translate(150px);}
+    50% {transform: rotate(180deg) translate(170px);}
+    100% {transform: rotate(360deg) translate(150px);}
+}
+
+.HUrano {
+    top: 1px;
+    background-color: rgba(133, 148, 134, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: HgirarU 6s linear infinite;
+    box-shadow: 
+        inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+        0.3em 0.2em 1em rgba(0, 0, 0, 0.8);
+}
+
+@keyframes HgirarU {
+    from {transform: rotate(0deg) translate(170px);}
+    to {transform: rotate(360deg) translate(170px);}
+}
+
+.HNeptuno {
+    top: 1px;
+    background-color: rgba(11, 225, 253, 0.888);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 1;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: HgirarN 6s linear infinite;
+     box-shadow: 
+        inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+        0.3em 0.2em 1em rgba(0, 0, 0, 0.5),
+        inset 0 -3em 3em #ffffffb9,
+        0.3em 0.2em 1em #d3f5fff6;
+}
+
+@keyframes HgirarN {
+    0% {transform: rotate(0deg) translate(185px);}
+    50% {transform: rotate(180deg) translate(195px);}
+    100% {transform: rotate(360deg) translate(185px);}
+}
+
+.Hseparar {
+    padding: 105px;
+}

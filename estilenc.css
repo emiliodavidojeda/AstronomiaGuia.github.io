@@ -1,0 +1,64 @@
+.body{
+    justify-content: center;
+    align-items: center;
+    display: flex;    
+}
+
+.caja_enc{
+    outline: double;
+}
+
+.espaciador{
+    margin-bottom: 5px;
+}
+
+.caja_enc{
+    padding: 50px 50px;
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input, textarea{
+    padding: 20px;
+    border-radius: 30%;
+    outline: black;
+}
+
+#lc {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+#lc {
+    font-weight: 800;
+    font-size: 15px;
+    margin: 10px 10px;
+    
+}
+
+.Boton{
+    border-radius: 20%;
+}
+
+.Boton:hover{
+    border-radius: 30%;
+    background-color: rgba(154, 243, 243, 0.621);
+
+}
+
+#Vi{
+    color:rgba(248, 99, 35, 0.633);
+    text-decoration:none;
+    transition: color 0.5s;
+    margin: 8px 8px;
+}
+
+.Vi{
+    padding: 15px;
+    margin-left: 690px;
+    margin-right: auto;
+    
+}

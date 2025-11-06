@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.informacion {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    font-weight: lighter;
+}
+
+.Label-M {
+    display: inline;
+    z-index: 0;
+}
+
+.Label-m {
+    display: inline;
+    z-index: 0;
+}

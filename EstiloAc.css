@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Información {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    font-weight: lighter;
+}
+
+#apx {    
+    background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#apy {
+    background-color:red;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.Purebacir{
+    margin: 10px 10px;
+    margin-bottom: 50px;
+}
+
+#circulo_x_y_z{
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    outline: solid;
+    margin-left: 700px;
+    margin-right: auto;
+    
+}
+
+#hgirar {
+    position: relative;
+    z-index: 1;
+    background-color:blueviolet;
+    height: 5px;
+    width: 100px;
+    margin: auto auto;
+    margin-bottom: 60px;
+    margin-top: -20px;
+    animation: girar 37s linear infinite; /*debido a que 4 secciones (aproximadamente)*/
+}
+
+.espaciado{
+    padding: 50px;
+}
+
+@keyframes girar {
+    from {transform: rotate(360deg)}
+    to {transform: rotate(0deg)}
+} 
+
+.hola{
+    margin-top: 50px;
+}
+
+.hola2{
+    margin-top: 20px;
+}
+
+.img {
+    z-index: 0;
+}
+
+.dibujo {
+    z-index: 1;
+    width: 80px;
+    height: 155px;
+    margin-left: 775px;
+    margin-right: auto;
+    border-radius: 50%;
+    margin-top: -180px;
+    outline: dashed;
+    outline-color:  rgb(255, 0, 0);
+}
+
+.dibujo2 {
+    z-index: 1;
+    width: 161px;
+    height: 50px;
+    margin-left: 735px;
+    margin-right: auto;
+    border-radius: 50%;
+    margin-top: -100px;
+    outline: dashed;
+    outline-color:rgb(0, 98, 255);
+    
+}
+
+.circulo_z{
+    display: inline-block;
+    z-index: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    outline: solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.eclipse2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -80px;
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+    animation: girare 6s linear infinite;
+    outline: dashed;
+}
+
+@keyframes girare {
+    0% {transform: rotate(0deg) }
+    50% {transform: rotate(20deg)}
+    100% {transform: rotate(0deg)}
+}
+
+.ahdbn {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
