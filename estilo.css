@@ -29,6 +29,7 @@
     transform: scale(1);
     transition: color 0.5s;
     margin: 8px 8px;
+    text-transform: uppercase;
 }
 
 .celeste a {
@@ -146,4 +147,5 @@
     scale: (2);
     margin: 8px 8px;
     font-size: large;
+
 }
