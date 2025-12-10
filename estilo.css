@@ -15,7 +15,7 @@
     display: flex;
     justify-content:space-between;  
     padding: 50px;
-    
+    text-transform: uppercase;
 }
 
 .tContenedor a:hover {
@@ -152,6 +152,7 @@
     font-size: large;
 
 }
+
 
 
 
