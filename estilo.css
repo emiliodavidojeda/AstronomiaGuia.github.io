@@ -37,6 +37,7 @@
     text-decoration: none;
     transition: color 0.5s;
     margin: 2px 8px;
+    text-transform: uppercase;
 }
 
 .Mecanica a {
@@ -51,6 +52,7 @@
     text-decoration: none;
     transition: color 0.5s;
     margin: 8px 8px;
+    text-transform: uppercase;
 }
 
 .cajaA a {
@@ -149,4 +151,5 @@
     font-size: large;
 
 }
+
 
